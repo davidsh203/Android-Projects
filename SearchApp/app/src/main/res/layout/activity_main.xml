@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/editTxt_search"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="אני רוצה לחפש"
+        android:textAlignment="center"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_chooseWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="בחר אתר לחיפוש"
+        android:textColor="#CD1313"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTxt_search"
+        app:layout_constraintStart_toStartOf="@+id/editTxt_search"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_search" />
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="חפש"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/editTxt_search"
+        app:layout_constraintStart_toStartOf="@+id/editTxt_search"
+        app:layout_constraintTop_toBottomOf="@+id/textView_chooseWeb">
+
+        <RadioButton
+            android:id="@+id/rb_google"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Google"
+            android:checked="true"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_yahoo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yahoo" />
+
+        <RadioButton
+            android:id="@+id/rb_bing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bing" />
+
+        <RadioButton
+            android:id="@+id/rb_duckduckgo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Duckduckgo" />
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
